@@ -15,7 +15,7 @@ class Character {
   }
 
   filterCharacters() {
-    if (this.name.length !== 1 && this.millisecondsPassed >= 500) {
+    if (this.name.length === 0 || (this.name.length > 1 && this.millisecondsPassed >= 500)) {
       this.resetTimer();
       this.getCharacters();
     }
