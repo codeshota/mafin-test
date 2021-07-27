@@ -12,20 +12,25 @@ const Characters = observer(() => {
   const characters = character.characters.map((c) => {
     return (
       <div key={c.id} className="card">
-        <img src={c.image} alt="Logo" data-tip data-for={'registerTip-' + c.id} />
-        <ReactTooltip 
-          id={'registerTip-' + c.id} 
-          place="bottom" 
-          effect="solid" 
+        <img src={c.image}
+          alt={"character " + c.name}
+          data-tip
+          data-for={'registerTip-' + c.id}
+        />
+
+        <ReactTooltip
+          id={'registerTip-' + c.id}
+          place="bottom"
+          effect="solid"
           multiline={true}
           className='card-tooltip'
           arrowColor="white"
-          >
-            Name: {c.name}
-            <br/>
-            Status: {c.status}
-            <br/>
-            Species: {c.species}
+        >
+          Name: {c.name}
+          <br />
+          Status: {c.status}
+          <br />
+          Species: {c.species}
         </ReactTooltip>
       </div>
     )
