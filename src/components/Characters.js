@@ -41,7 +41,7 @@ const Characters = observer(() => {
       <div className="input-wrap">
         <input
           type="text"
-          className="input"
+          className="input-filter"
           value={character.name}
           onChange={findCharacters}
         />
